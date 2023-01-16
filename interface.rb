@@ -13,7 +13,7 @@ class Interface
     puts '7 - Add a book'
     puts '8 - Add a music albums'
     puts '9 - Add a game'
-    puts '10 - Exit'
+    puts '0 - Exit'
     puts '--------------------------------------------------'
   end
 end
