@@ -1,29 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
@@ -165,25 +141,10 @@ Example command:
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 ### Deployment
 
@@ -205,17 +166,23 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Lucca Micale**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@luccamicale](https://github.com/luccamicale)
+- LinkedIn: [luccamicale](https://www.linkedin.com/in/luccamicale/)
+- Twitter: [@luccamicale_](https://twitter.com/LuccaMicale_)
 
-👤 **Author2**
+👤 **Sunday Anthony Ezema**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@sonyco-4u](https://github.com/sonyco-4u)
+- Twitter: [@EZEMASUN](https://twitter.com/EZEMASUN)
+- LinkedIn: [ezema-anthony-sunday](https://www.linkedin.com/in/sunday-athony-ezema/)
+
+👤 **Camilo Vela**
+
+- GitHub: [@camilovelag](https://github.com/camilovelag)
+- Twitter: [@camilovelag](https://twitter.com/camilovelag)
+- LinkedIn: [camilovelag](https://linkedin.com/in/camilovelag)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,9 +192,24 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+-Insert and query data in SQL.
+-Use primary key & foreign key mechanisms for joining tables.
+-Understand the different types of relationships between tables.
+-Query multiple tables.
+-Prepare complex queries that answer analytical questions.
+-Run a program using the command line.
+-Use Ruby syntax for basic programming operations.
+-Apply Ruby best practices and language style guides in code.
+-Describe the SOLID principles of OOP.
+-Implement classes and objects in Ruby.
+-Understand the four main principles of OOP.
+-Implement encapsulation and inheritance with Ruby.
+-Create a UML class diagram.
+-Explain the difference between associations, aggregations, and composition in OOP.
+-Set up associations between classes and objects.
+-Store data in files.
+-Build interactive console apps.
+-Recognize the value of making equal contributions to group projects to produce the best outcome.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -283,6 +265,5 @@ I would like to thank...
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
