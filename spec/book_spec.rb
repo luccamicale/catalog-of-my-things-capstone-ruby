@@ -1,5 +1,4 @@
-require './src/classes/book'
-# use require_relative 'spec_helper' when running correctly
+require_relative 'spec_helper'
 
 describe Book do
   context 'check if book is added correctly' do
