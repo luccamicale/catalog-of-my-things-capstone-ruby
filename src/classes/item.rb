@@ -1,29 +1,18 @@
 require 'date'
 require 'securerandom'
 
+# Item class
 class Item
-  attr_accessor :publish_date, :archived
-  attr_reader :id, :genre, :author, :label
+  attr_accessor :publish_date, :id, :genre, :author, :label
+  attr_reader :archived
 
-  def initialize(publish_date = Date.today, id = SecureRandom.uuid, archived: false)
-    @id = id
+  def initialize(publish_date = Date.today)
+    @id = SecureRandom.uuid
+    @genre = nil
+    @author = nil
+    @label = nil
     @publish_date = publish_date
-    @archived = archived
-  end
-
-  def genre=(genre)
-    @genre = genre
-    genre.items.push(self) unless genre.items.include?(self)
-  end
-
-  def author=(author)
-    @author = author
-    author.items.push(self) unless author.items.include?(self)
-  end
-
-  def label=(label)
-    @label = label
-    label.items.push(self) unless label.items.include?(self)
+    @archived = false
   end
 
   def move_to_archive
@@ -36,3 +25,13 @@ class Item
     (Date.today - Date.parse(@publish_date)).to_i / 365 > 10
   end
 end
+
+# Instance of Item class
+
+# Instance of Item class with custom publish date
+item = Item.new('2010-01-01')
+item.genre = 'Horror'
+item.author = 'Stephen King'
+item.label = 'Penguin'
+puts item.inspect
+# Instance of Item class with custom
