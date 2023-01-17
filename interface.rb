@@ -1,9 +1,15 @@
+# Interface class
 class Interface
-  puts '--------------------------------------------------'
-  puts 'Welcome to Catalog of my Things  ͡° ͜ʖ ͡°'
-  def interface
+  def header
+    puts '--------------------------------------------------'
+    puts 'Welcome to Catalog of my Things  ͡° ͜ʖ ͡°'
     puts '--------------------------------------------------'
     puts 'Select an option: '
+    menu
+    puts '--------------------------------------------------'
+  end
+
+  def menu
     puts '1 - List all Books'
     puts '2 - List all music albums'
     puts '3 - List of games'
@@ -14,6 +20,5 @@ class Interface
     puts '8 - Add a music albums'
     puts '9 - Add a game'
     puts '0 - Exit'
-    puts '--------------------------------------------------'
   end
 end
