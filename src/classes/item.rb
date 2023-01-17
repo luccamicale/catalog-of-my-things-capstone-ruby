@@ -25,13 +25,3 @@ class Item
     (Date.today - Date.parse(@publish_date)).to_i / 365 > 10
   end
 end
-
-# Instance of Item class
-
-# Instance of Item class with custom publish date
-item = Item.new('2010-01-01')
-item.genre = 'Horror'
-item.author = 'Stephen King'
-item.label = 'Penguin'
-puts item.inspect
-# Instance of Item class with custom
