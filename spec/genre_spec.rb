@@ -1,6 +1,6 @@
 require_relative 'spec_helper'
 
-describe "Genre class unit tests" do
+describe 'Genre class unit test' do
   before(:each) do
     @genre = Genre.new('Reggaeton')
   end
