@@ -1,18 +1,21 @@
 require './src/classes/label'
 require './src/classes/book'
+require './database/persistors/labels_persistor'
+require './database/persistors/books_persistor'
 
 class App
   def initialize
-    @labels = []
+    @labels = LabelsPersistor.read_from_file
     @genres = []
     @authors = []
     @games = []
     @music_albums = []
-    @books = []
+    @books = BooksPersistor.read_from_file(@labels)
   end
 
   def add_book
-    puts ''
+    puts @labels.inspect
+    puts @books.inspect
     puts 'ADD A NEW BOOK'
     print 'Add a genre: '
     genre = gets.chomp
@@ -36,11 +39,20 @@ class App
     book.author = author
     # ----------------
     label.add_item(book)
-    @books << book
-    @labels << label
+    # add genre and author to the save_data method when methods to add genre and author objects are available
+    save_data(book, label)
     puts 'Book added'
+  end
+
+  def save_data(book, label)
+    @books << book
+    @labels << label unless @labels.include?(label)
+    # add code to save objects into app collections
+    LabelsPersistor.write_to_file(@labels)
+    BooksPersistor.write_to_file(@books)
+    # add other persistors
   end
 end
 
 # To test the add_book method, uncomment the following command:
-# App.new.add_book
+App.new.add_book
