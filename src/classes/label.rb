@@ -19,7 +19,7 @@ class Label
     puts 'Enter a new label or select an existing one:'
     print '  Enter the title of the label:'
     title = gets.chomp
-    if labels.any? { |label| label.title === title }
+    if labels.any? { |label| label.title == title }
       puts '  Label found!'
       labels.find { |label| label.title == title }
     else

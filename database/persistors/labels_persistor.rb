@@ -1,7 +1,7 @@
 require 'json'
 require './src/classes/label'
 
-module LabelPersistor
+module LabelsPersistor
   SOURCE = './database/data/labels.json'.freeze
 
   def self.read_from_file

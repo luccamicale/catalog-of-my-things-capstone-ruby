@@ -1,10 +1,10 @@
 require './src/classes/label'
 require './src/classes/book'
-require './database/persistors/label_persistor'
+require './database/persistors/labels_persistor'
 
 class App
   def initialize
-    @labels = LabelPersistor.read_from_file
+    @labels = LabelsPersistor.read_from_file
     @genres = []
     @authors = []
     @games = []
@@ -38,14 +38,15 @@ class App
     book.author = author
     # ----------------
     label.add_item(book)
-    @books << book
-    @labels << label
-    save_data
+    # add genre and author to the save_data method when methods to add genre and author objects are available
+    save_data(book, label)
     puts 'Book added'
   end
 
-  def save_data
-    LabelPersistor.write_to_file(@labels)
+  def save_data(book, label)
+    @books << book
+    @labels << label
+    LabelsPersistor.write_to_file(@labels)
   end
 end
 
