@@ -1,9 +1,10 @@
 require './src/classes/label'
 require './src/classes/book'
+require './database/persistors/label_persistor'
 
 class App
   def initialize
-    @labels = []
+    @labels = LabelPersistor.read_from_file
     @genres = []
     @authors = []
     @games = []
@@ -12,6 +13,7 @@ class App
   end
 
   def add_book
+    puts @labels.inspect
     puts ''
     puts 'ADD A NEW BOOK'
     print 'Add a genre: '
@@ -38,9 +40,14 @@ class App
     label.add_item(book)
     @books << book
     @labels << label
+    save_data
     puts 'Book added'
+  end
+
+  def save_data
+    LabelPersistor.write_to_file(@labels)
   end
 end
 
 # To test the add_book method, uncomment the following command:
-# App.new.add_book
+App.new.add_book
