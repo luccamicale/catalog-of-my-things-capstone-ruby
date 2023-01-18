@@ -125,24 +125,10 @@ To get a local copy up and running, follow these steps.
 
 > Describe 1 - 3 features you will add to the project.
 
--Insert and query data in SQL.
--Use primary key & foreign key mechanisms for joining tables.
--Understand the different types of relationships between tables.
--Query multiple tables.
--Prepare complex queries that answer analytical questions.
--Run a program using the command line.
 -Use Ruby syntax for basic programming operations.
--Apply Ruby best practices and language style guides in code.
--Describe the SOLID principles of OOP.
--Implement classes and objects in Ruby.
--Understand the four main principles of OOP.
--Implement encapsulation and inheritance with Ruby.
 -Create a UML class diagram.
--Explain the difference between associations, aggregations, and composition in OOP.
--Set up associations between classes and objects.
 -Store data in files.
--Build interactive console apps.
--Recognize the value of making equal contributions to group projects to produce the best outcome.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
