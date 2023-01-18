@@ -152,7 +152,7 @@ To get a local copy up and running, follow these steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+It is necessary to thanks Camilo Vela. He are with Anthony and me until yesterday, when Microverse approved your request and it was promoved at the next week.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
