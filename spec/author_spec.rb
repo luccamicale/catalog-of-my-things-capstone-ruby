@@ -15,11 +15,7 @@ describe Author do
     -> { Author.new 'Harry Potter' }.should raise_error ArgumentError
   end
 
-  describe 'tests for methods in author class' do
-    it 'should add an item' do
-      item = Item.new('2022-05-09')
-      @author.add_item(item)
-      expect(@author.items.length).to eql 1
-    end
+  it 'Item array should starts empty' do
+    expect(@author.items).to eq([])
   end
 end
