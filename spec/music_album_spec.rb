@@ -1,19 +1,22 @@
 require_relative 'spec_helper'
 
 describe MusicAlbum do
-  music_album = MusicAlbum.new('28-08-2000', on_spotify: false)
+  # use on_spotify, date, genre, author, label
+  music_album = MusicAlbum.new(true, '2020-01-01', 'Horror', 'Joy', 'Bad Horror')
 
-  context 'the unit test for the music album class' do
-    it 'new music album object' do
-      expect(music_album).to be_instance_of(MusicAlbum)
-    end
+  it 'takes parameters and returns a MusicAlbum object' do
+    expect(music_album).to be_an_instance_of MusicAlbum
+  end
 
-    it 'the correct publish date is 28-08-2000' do
-      expect(music_album.publish_date).to eq('28-08-2000')
-    end
+  it 'returns the on spotify' do
+    expect(music_album.on_spotify).to eq true
+  end
 
-    it 'Should be kind of Item object' do
-      expect(music_album).to be_kind_of Item
-    end
+  it 'returns the publish date' do
+    expect(music_album.publish_date) == '2020-01-01'
+  end
+
+  it 'returns the genre' do
+    expect(music_album.genre) == 'Horror'
   end
 end

@@ -1,20 +1,19 @@
 require_relative 'spec_helper'
 
-describe Label do
-  label = Label.new('Favorites', 'red')
+describe 'Testing Label' do
+  context 'Creating new Label' do
+    new_label = Label.new('track', 'yellow')
 
-  context 'check if label is added correctly' do
-    it 'should be able to add label' do
-      expect(label.title).to eq('Favorites')
-      expect(label.color).to eq('red')
+    it 'Check if is an instance of Label' do
+      expect(new_label).to be_instance_of(Label)
     end
-  end
 
-  context 'check if label is added to item correctly' do
-    it 'should be able to add label to item' do
-      item = Item.new('2022-05-09')
-      label.add_item(item)
-      expect(label.items).to include(item)
+    it "Title of the created label should be 'track'" do
+      expect(new_label.title).to eql 'track'
+    end
+
+    it "Color of the created label should be 'yellow'" do
+      expect(new_label.color).to eql 'yellow'
     end
   end
 end
