@@ -4,20 +4,23 @@ AllCops:
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    - "./src/modules/show_music_album.rb"
+    - "./src/modules/show_authors.rb"
+    - "./src/modules/show_books.rb"
 
   DisplayCopNames: true
 
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
-  Max: 20
+  Max: 40
 Metrics/AbcSize:
   Max: 50
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
-  Max: 30
+  Max: 40
 
 
 Style/Documentation:

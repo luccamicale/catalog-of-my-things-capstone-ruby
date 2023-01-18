@@ -1,23 +1,19 @@
 require_relative 'spec_helper'
 
-describe Game do
-  before :each do
-    @game = Game.new('2020-09-05', 'yes', '2021-01-01')
-  end
+describe 'Testing Game' do
+  context 'Creating a new Game for testing' do
+    new_game = Game.new(true, '2006-05-06', 'Horror', 'Author1', 'New', '2005-01-01')
 
-  describe '#new' do
-    it 'creates an instance of the game class' do
-      @game.should(be_an_instance_of(Game))
+    it 'Check if is an instance of Author' do
+      expect(new_game).to be_instance_of(Game)
     end
-  end
 
-  it 'throws an argument error when parameters are less than or greater than is expected' do
-    -> { Game.new '2001-06-09' }.should raise_error ArgumentError
-  end
+    it "Author of the created game should be 'Author1'" do
+      expect(new_game.author).to eql 'Author1'
+    end
 
-  describe 'tests for methods in game class' do
-    it 'should show if a game can be archieved or not' do
-      expect(@game.can_be_archived?).to eql false
+    it 'Should return true from can_be_archived method' do
+      expect(new_game.can_be_archived?).to eql false
     end
   end
 end

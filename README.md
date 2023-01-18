@@ -36,17 +36,17 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Catalog of my things] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[Catalog of my things]** is a... app with ruby to have my personal things in a catalog
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> we created a app with ruby to have and save information about my personal life. This is a catalog to have more tidy my things.
 
 <details>
   <summary>Client</summary>
@@ -75,9 +75,9 @@
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[complete rspec unit test]**
+- **[add a video]**
+- **[complete readme]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,68 +99,6 @@
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
-
-In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
-
-### Setup
-
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
-
-### Usage
-
-To run the project, execute the following command:
-
-### Run tests
-
-To run tests, run the following command:
-
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -178,11 +116,6 @@ Example:
 - Twitter: [@EZEMASUN](https://twitter.com/EZEMASUN)
 - LinkedIn: [ezema-anthony-sunday](https://www.linkedin.com/in/sunday-athony-ezema/)
 
-👤 **Camilo Vela**
-
-- GitHub: [@camilovelag](https://github.com/camilovelag)
-- Twitter: [@camilovelag](https://twitter.com/camilovelag)
-- LinkedIn: [camilovelag](https://linkedin.com/in/camilovelag)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -229,7 +162,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+we think that this a good project to have in your houses and use all days in your routins
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -239,27 +172,12 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank to my partner Anthony for your effort in the whole project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 

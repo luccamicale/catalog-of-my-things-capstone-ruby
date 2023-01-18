@@ -1,58 +1,67 @@
-require './src/classes/label'
-require './src/classes/book'
-require './database/persistors/labels_persistor'
-require './database/persistors/books_persistor'
-
+require_relative '../data/read_data'
+require_relative './modules/show_books'
+require_relative './modules/show_labels'
+require_relative './modules/create_book'
+require_relative './modules/show_music_album'
+require_relative './modules/show_genres'
+require_relative './modules/create_music_albums'
+require_relative './write_data'
+require_relative './modules/show_games'
+require_relative './modules/show_authors'
+require_relative './modules/create_game'
 class App
+  include ReadData
+  include ListBooks
+  include ListLabels
+  include CreateBook
+  include WriteData
+  include ListMusicAlbum
+  include ListGenre
+  include CreateMusicAlbum
+  include ListGames
+  include ListAuthors
+  include CreateGame
   def initialize
-    @labels = LabelsPersistor.read_from_file
-    @genres = []
-    @authors = []
-    @games = []
-    @music_albums = []
-    @books = BooksPersistor.read_from_file(@labels)
+    @menu_options = {
+      '1' => method(:list_all_books),
+      '2' => method(:list_all_music_albums),
+      '3' => method(:list_all_games),
+      '4' => method(:list_all_genres),
+      '5' => method(:list_all_labels),
+      '6' => method(:list_all_authors),
+      '7' => method(:add_book),
+      '8' => method(:add_music_album),
+      '9' => method(:add_game)
+    }
+    @books = read_books
+    @labels = read_labels
+    @music_albums = read_music_album
+    @genres = read_genre
+    @games = read_games
+    @authors = read_authors
   end
 
-  def add_book
-    puts @labels.inspect
-    puts @books.inspect
-    puts 'ADD A NEW BOOK'
-    print 'Add a genre: '
-    genre = gets.chomp
-    print 'Add an author: '
-    author = gets.chomp
-    # Label Input method to add a new label (reusable code)
-    label = Label.input(@labels)
-    # ----------------
-    print 'Add a publish date: '
-    publish_date = gets.chomp
-    print 'Add a publisher: '
-    publisher = gets.chomp
-    print 'Add a cover state: '
-    cover_state = gets.chomp
-    book = Book.new(publish_date, publisher, cover_state)
-    # change the book's genre and author setters for the following:
-    # genre.add_item(book)
-    # author.add_item(book)
-    # only when methods to add genre and author objects are available
-    book.genre = genre
-    book.author = author
-    # ----------------
-    label.add_item(book)
-    # add genre and author to the save_data method when methods to add genre and author objects are available
-    save_data(book, label)
-    puts 'Book added'
-  end
+  # Showing the options here
+  def run
+    @menu_options.each_with_index do |option, index|
+      puts "#{index + 1} - #{option[1].name.to_s.split('_').join(' ').capitalize}"
+    end
+    puts '0 - Exit'
+    puts '-----------------------------------------------------------'
 
-  def save_data(book, label)
-    @books << book
-    @labels << label unless @labels.include?(label)
-    # add code to save objects into app collections
-    LabelsPersistor.write_to_file(@labels)
-    BooksPersistor.write_to_file(@books)
-    # add other persistors
+    option = gets.chomp.to_s
+    if @menu_options.key?(option)
+      puts ''
+      @menu_options[option].call
+      puts ''
+      puts '-----------------------------------------------------------'
+      run
+    elsif option == '0'
+      puts "\nThank you for using this app!\n\n"
+    else
+      puts "\nThat is not a valid option\n\n"
+      run
+      puts '-----------------------------------------------------------'
+    end
   end
 end
-
-# To test the add_book method, uncomment the following command:
-App.new.add_book
