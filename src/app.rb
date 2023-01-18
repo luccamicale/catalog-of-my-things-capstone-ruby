@@ -1,6 +1,7 @@
 require './src/classes/label'
 require './src/classes/book'
 require './database/persistors/labels_persistor'
+require './database/persistors/books_persistor'
 
 class App
   def initialize
@@ -9,12 +10,12 @@ class App
     @authors = []
     @games = []
     @music_albums = []
-    @books = []
+    @books = BooksPersistor.read_from_file(@labels)
   end
 
   def add_book
     puts @labels.inspect
-    puts ''
+    puts @books.inspect
     puts 'ADD A NEW BOOK'
     print 'Add a genre: '
     genre = gets.chomp
@@ -45,8 +46,11 @@ class App
 
   def save_data(book, label)
     @books << book
-    @labels << label
+    @labels << label unless @labels.include?(label)
+    # add code to save objects into app collections
     LabelsPersistor.write_to_file(@labels)
+    BooksPersistor.write_to_file(@books)
+    # add other persistors
   end
 end
 
