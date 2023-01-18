@@ -1,8 +1,11 @@
-require_relative './app'
-
+require_relative './src/app'
 def main
-  app = App.new
-  app.run
+  system('cls') # for windows
+  system('clear') # for linux
+  puts '-----------------------------------------------------------'
+  puts 'Welcome to Our Collection'
+  puts '-----------------------------------------------------------'
+  App.new.run
 end
 
 main
