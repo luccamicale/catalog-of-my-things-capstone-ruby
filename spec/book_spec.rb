@@ -19,21 +19,18 @@ describe Book do
   context 'check if book is archived correctly' do
     it 'should not be able to archive book if cover_state = good' do
       book.move_to_archive
-
       expect(book.archived).to eq(false)
     end
 
     it 'should be able to archive book if cover_state = bad' do
       book.cover_state = 'bad'
       book.move_to_archive
-
       expect(book.archived).to eq(true)
     end
 
     it 'should archive book if publish_date > 10 years' do
       book.publish_date = '2008-01-01'
       book.move_to_archive
-
       expect(book.archived).to eq(true)
     end
   end

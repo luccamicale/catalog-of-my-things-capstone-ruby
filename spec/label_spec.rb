@@ -13,9 +13,7 @@ describe Label do
   context 'check if label is added to item correctly' do
     it 'should be able to add label to item' do
       item = Item.new('2022-05-09')
-
       label.add_item(item)
-
       expect(label.items).to include(item)
     end
   end
