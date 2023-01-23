@@ -37,4 +37,16 @@ module ReadData
     data_from_file = File.read(json_file)
     JSON.parse(data_from_file)
   end
+
+  def read_movies
+    json_file = File.open('./data/movies.json')
+    data_from_file = File.read(json_file)
+    JSON.parse(data_from_file)
+  end
+
+  def read_sources
+    json_file = File.open('./data/sources.json')
+    data_from_file = File.read(json_file)
+    JSON.parse(data_from_file)
+  end
 end

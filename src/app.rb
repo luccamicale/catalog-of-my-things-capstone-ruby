@@ -9,6 +9,9 @@ require_relative './write_data'
 require_relative './modules/show_games'
 require_relative './modules/show_authors'
 require_relative './modules/create_game'
+require_relative './modules/create_movie'
+require_relative './modules/show_sources'
+require_relative './modules/show_movies'
 class App
   include ReadData
   include ListBooks
@@ -21,6 +24,9 @@ class App
   include ListGames
   include ListAuthors
   include CreateGame
+  include CreateMovie
+  include ListSources
+  include ListMovies
   def initialize
     @menu_options = {
       '1' => method(:list_all_books),
@@ -29,9 +35,12 @@ class App
       '4' => method(:list_all_genres),
       '5' => method(:list_all_labels),
       '6' => method(:list_all_authors),
-      '7' => method(:add_book),
-      '8' => method(:add_music_album),
-      '9' => method(:add_game)
+      '7' => method(:list_all_movies),
+      '8' => method(:list_all_sources),
+      '9' => method(:add_book),
+      '10' => method(:add_music_album),
+      '11' => method(:add_game),
+      '12' => method(:add_movie)
     }
     @books = read_books
     @labels = read_labels
@@ -39,6 +48,8 @@ class App
     @genres = read_genre
     @games = read_games
     @authors = read_authors
+    @movies = read_movies
+    @sources = read_sources
   end
 
   # Showing the options here

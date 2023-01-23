@@ -17,4 +17,10 @@ module WriteData
     JSON.parse(File.read(json_file))
     File.write('././data/games.json', @games.to_json)
   end
+
+  def save_movies
+    json_file = File.open('././data/movies.json')
+    JSON.parse(File.read(json_file))
+    File.write('././data/movies.json', @movies.to_json)
+  end
 end
